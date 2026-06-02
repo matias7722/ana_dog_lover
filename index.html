@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANA DOG LOVER - Albergue de perros | Responsabilidad Social Universitaria</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* NAV */
+        nav {
+            background: #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #667eea;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1200x400/555/white?text=Perros+felices+en+ANA+DOG+LOVER');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: transform 0.3s;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: #ff5252;
+        }
+
+        .btn-pequeno {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn-pequeno:hover {
+            background: #764ba2;
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 60px 0;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #764ba2;
+        }
+
+        /* CONÓCENOS */
+        .mision-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: #f4f4f4;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .historia {
+            background: #e8e8ff;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .historia h3 {
+            color: #764ba2;
+            margin-bottom: 15px;
+        }
+
+        /* GALERÍA */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .perro {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .perro:hover {
+            transform: translateY(-5px);
+        }
+
+        .perro img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .perro h3 {
+            padding: 15px 15px 5px;
+            color: #764ba2;
+        }
+
+        .perro p {
+            padding: 0 15px 10px;
+        }
+
+        /* CÓMO AYUDAR */
+        .ayudar {
+            background: #f9f9f9;
+        }
+
+        .ayuda-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .ayuda-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .ayuda-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .ayuda-item h3 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+
+        .ayuda-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .ayuda-item li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .ayuda-item li:last-child {
+            border-bottom: none;
+        }
+
+        /* CONTACTO */
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .info-contacto {
+            background: #f4f4f4;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .info-contacto p {
+            margin-bottom: 15px;
+        }
+
+        .social {
+            margin-top: 20px;
+        }
+
+        .social a {
+            color: #667eea;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .social a:hover {
+            color: #764ba2;
+        }
+
+        .formulario {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .formulario h3 {
+            margin-bottom: 20px;
+            color: #764ba2;
+        }
+
+        .formulario input,
+        .formulario select,
+        .formulario textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        .formulario button {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .formulario button:hover {
+            background: #764ba2;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav a {
+                display: inline-block;
+                padding: 10px 12px;
+                font-size: 0.9rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="container">
+            <h1>🐾 ANA DOG LOVER</h1>
+            <p>Tecnología con sentido humano para los que no tienen voz</p>
+        </div>
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav>
+        <div class="container">
+            <a href="#inicio">Inicio</a>
+            <a href="#conocenos">Conócenos</a>
+            <a href="#animales">Nuestros animales</a>
+            <a href="#ayudar">¿Cómo ayudar?</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- INICIO / HERO -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>50 perros rescatados te necesitan</h2>
+            <p>Ubicados en Chilca Jr. Arequipa 583, Huancayo - Junín</p>
+            <a href="#ayudar" class="btn">❤️ Dona ahora</a>
+        </div>
+    </section>
+
+    <!-- CONÓCENOS -->
+    <section id="conocenos" class="conocenos">
+        <div class="container">
+            <h2>📖 Conócenos</h2>
+            <div class="mision-vision">
+                <div class="card">
+                    <h3>🎯 Misión</h3>
+                    <p>Rescatar, rehabilitar y dar en adopción responsable a perros en situación de calle en Huancayo, promoviendo el respeto por los animales y la tenencia responsable como valores fundamentales.</p>
+                </div>
+                <div class="card">
+                    <h3>👁️ Visión</h3>
+                    <p>Ser un albergue modelo en la región Junín, reconocido por las autoridades locales y la comunidad, logrando sostenibilidad a través de donaciones, voluntariado y adopciones exitosas.</p>
+                </div>
+            </div>
+            <div class="historia">
+                <h3>🏠 Nuestra historia</h3>
+                <p>ANA DOG LOVER fue fundado en 2016 por Ana, una mujer que decidió dar una segunda oportunidad a perros abandonados y maltratados en las calles de Huancayo. Con mucho esfuerzo y recursos limitados, hoy alberga a 50 perros que han sido rescatados de situaciones extremas: atropellos, sarna avanzada, desnutrición severa y maltrato directo. A pesar de las dificultades, el amor y la dedicación de Ana y los voluntarios mantienen este refugio como un lugar donde estos seres tienen una segunda oportunidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUESTROS ANIMALES -->
+    <section id="animales" class="animales">
+        <div class="container">
+            <h2>🐕 Nuestros animales en adopción</h2>
+            <div class="galeria">
+                <div class="perro">
+                    <img src="https://placehold.co/400x300/FFB6C1/white?text=Luna" alt="Luna">
+                    <h3>🐕 Luna</h3>
+                    <p><strong>Edad:</strong> 3 años</p>
+                    <p><strong>Personalidad:</strong> Juguetona y cariñosa</p>
+                    <p><strong>Salud:</strong> Esterilizada, vacunada</p>
+                </div>
+                <div class="perro">
+                    <img src="https://placehold.co/400x300/87CEEB/white?text=Bruno" alt="Bruno">
+                    <h3>🐕 Bruno</h3>
+                    <p><strong>Edad:</strong> 5 años</p>
+                    <p><strong>Personalidad:</strong> Tranquilo y leal</p>
+                    <p><strong>Salud:</strong> En tratamiento por sarna</p>
+                </div>
+                <div class="perro">
+                    <img src="https://placehold.co/400x300/FFD700/white?text=Chispa" alt="Chispa">
+                    <h3>🐕 Chispa</h3>
+                    <p><strong>Edad:</strong> 1 año</p>
+                    <p><strong>Personalidad:</strong> Muy activa y sociable</p>
+                    <p><strong>Salud:</strong> Completamente sana</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; color: #666;">✨ ¡Y muchos más perritos esperando un hogar! Contáctanos para conocerlos ✨</p>
+        </div>
+    </section>
+
+    <!-- CÓMO AYUDAR -->
+    <section id="ayudar" class="ayudar">
+        <div class="container">
+            <h2>❤️ ¿Cómo ayudar?</h2>
+            <div class="ayuda-grid">
+                <div class="ayuda-item">
+                    <h3>🍖 Víveres necesarios</h3>
+                    <ul>
+                        <li>Croquetas para perro adulto (22kg)</li>
+                        <li>Lejía, escobas, recogedores</li>
+                        <li>Bolsas, guantes, mangueras</li>
+                        <li>Medicamentos: antiparasitarios, vacunas</li>
+                        <li>Mantas, toallas y frazadas</li>
+                    </ul>
+                </div>
+                <div class="ayuda-item">
+                    <h3>💰 Donaciones económicas</h3>
+                    <p><strong>📱 Yape:</strong> 912 345 678</p>
+                    <p><strong>📱 Plin:</strong> 987 654 321</p>
+                    <p><strong>🏦 Banco:</strong> Cuenta de ahorros - 123-456-7890</p>
+                    <button id="btnDonar" class="btn-pequeno">💸 Donar ahora</button>
+                </div>
+                <div class="ayuda-item">
+                    <h3>🙋 Voluntariado</h3>
+                    <p>Únete como voluntario en actividades como:</p>
+                    <ul>
+                        <li>✓ Limpieza de espacios</li>
+                        <li>✓ Paseo de perros</li>
+                        <li>✓ Acompañamiento afectivo</li>
+                        <li>✓ Ayuda en adopciones</li>
+                    </ul>
+                    <a href="#contacto" class="btn-pequeno">Quiero ser voluntario</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO Y FORMULARIO -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>📞 Contáctanos</h2>
+            <div class="contacto-grid">
+                <div class="info-contacto">
+                    <p><strong>📍 Dirección:</strong> Chilca Jr. Arequipa 583, Huancayo - Junín</p>
+                    <p><strong>📧 Correo:</strong> anadoglover@email.com</p>
+                    <p><strong>📱 Teléfono:</strong> 912 345 678</p>
+                    <p><strong>🕒 Horario de atención:</strong> Lunes a Domingo 9am - 5pm</p>
+                    <div class="social">
+                        <a href="#">📘 Facebook</a> | 
+                        <a href="#">📸 Instagram</a> | 
+                        <a href="#">💬 WhatsApp</a>
+                    </div>
+                </div>
+                <form id="formContacto" class="formulario">
+                    <h3>✉️ Escríbenos</h3>
+                    <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+                    <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                    <select id="tipo">
+                        <option value="adopcion">🐕 Quiero adoptar</option>
+                        <option value="voluntario">🙋 Quiero ser voluntario</option>
+                        <option value="donacion">💰 Quiero donar</option>
+                    </select>
+                    <textarea id="mensaje" placeholder="Cuéntanos cómo quieres ayudar o qué perrito te interesa..." rows="3"></textarea>
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="container">
+            <p>© 2026 ANA DOG LOVER - Albergue de perros rescatados</p>
+            <p>Proyecto de Responsabilidad Social Universitaria - Ingeniería al servicio de la comunidad</p>
+            <p>Universidad Peruana Los Andes - Facultad de Ingeniería - Ingeniería de Sistemas y Computación</p>
+            <p style="margin-top: 15px; font-size: 0.9rem;">"Tecnología con sentido humano"</p>
+        </div>
+    </footer>
+
+    <script>
+        // Formulario de contacto
+        document.getElementById('formContacto').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const tipo = document.getElementById('tipo').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            let tipoTexto = '';
+            let emoji = '';
+            if (tipo === 'adopcion') {
+                tipoTexto = 'adoptar a uno de nuestros perritos';
+                emoji = '🐕';
+            } else if (tipo === 'voluntario') {
+                tipoTexto = 'ser voluntario en el albergue';
+                emoji = '🙋';
+            } else {
+                tipoTexto = 'hacer una donación';
+                emoji = '💰';
+            }
+            
+            alert(`🐾 ¡Gracias ${nombre}! ${emoji}\n\nNos pondremos en contacto contigo para ${tipoTexto}.\n📧 Correo: ${email}\n💬 Mensaje: ${mensaje || '(sin mensaje adicional)'}\n\n¡Los 50 perritos de ANA DOG LOVER te lo agradecen infinitamente! ❤️`);
+            
+            this.reset();
+        });
+
+        // Botón de donación
+        const btnDonar = document.getElementById('btnDonar');
+        if (btnDonar) {
+            btnDonar.addEventListener('click', function() {
+                alert('📱 Números para donar:\n\n💛 YAPE: 912 345 678\n💙 PLIN: 987 654 321\n🏦 Banco: Cuenta de ahorros 123-456-7890\n\n✨ ¡Gracias por tu ayuda! Con tu aporte, podemos seguir dando amor y cuidado a 50 perritos que nos necesitan. ✨');
+            });
+        }
+
+        // Smooth scroll para los enlaces del nav
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

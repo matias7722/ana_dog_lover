@@ -525,7 +525,7 @@
 
     <script>
         // Formulario de contacto
-        // Formulario de contacto - Enviar a WhatsApp
+// Formulario de contacto - Enviar a correo
 document.getElementById('formContacto').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -535,21 +535,21 @@ document.getElementById('formContacto').addEventListener('submit', function(e) {
     const mensaje = document.getElementById('mensaje').value;
     
     let tipoTexto = '';
-    if (tipo === 'adopcion') tipoTexto = '🐕 Quiero adoptar';
-    else if (tipo === 'voluntario') tipoTexto = '🙋 Quiero ser voluntario';
-    else tipoTexto = '💰 Quiero donar';
+    if (tipo === 'adopcion') tipoTexto = 'Adoptar';
+    else if (tipo === 'voluntario') tipoTexto = 'Voluntario';
+    else tipoTexto = 'Donación';
     
-    const numeroWhatsApp = "51917903838"; // Tu número sin el +51
+    const correoDestino = "saforasgomezmatias@gmail.com"; // Cambia por tu correo real
     
-    const texto = `Hola, me comunico desde la web ANA DOG LOVER:%0A%0A`;
-    texto += `*Nombre:* ${nombre}%0A`;
-    texto += `*Correo:* ${email}%0A`;
-    texto += `*Tipo:* ${tipoTexto}%0A%0A`;
-    texto += `*Mensaje:*%0A${mensaje}`;
+    const asunto = `Contacto Web - ${tipoTexto}`;
+    const cuerpo = `Nombre: ${nombre}%0A` +
+                   `Correo: ${email}%0A` +
+                   `Tipo: ${tipoTexto}%0A%0A` +
+                   `Mensaje:%0A${mensaje}`;
     
-    window.open(`https://wa.me/${51917903838}?text=${texto}`, '_blank');
+    window.location.href = `mailto:${correoDestino}?subject=${asunto}&body=${cuerpo}`;
     
-    alert(`🐾 ¡Gracias ${nombre}! Serás redirigido a WhatsApp para enviarnos tu mensaje.`);
+    alert(`🐾 ¡Gracias ${nombre}! Se abrirá tu correo para enviarnos el mensaje.`);
     this.reset();
 });
 

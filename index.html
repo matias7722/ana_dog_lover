@@ -62,24 +62,34 @@
             background: #667eea;
         }
 
-        /* HERO */
+        /* HERO - Imagen de fondo centrada */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?w=1200');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/460966513_1045794714223538_1708194077247134016_n.png?stp=dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeH3YYK8rOWfrA4EYZbe8CMfoJhDoy8G6HegmEOjLwbod3DxXI7axOK93zKeoN1fVTjsUMlFW7jf2lUiz2gQoM7d&_nc_ohc=FB0ODBBljBgQ7kNvwHn2byM&_nc_oc=AdqJAu4dyI6ceutfDylyaZj8O0022EyeQl9L3IoEIIeAHLqCdGYmHXRWGYjaGzg8YMA&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=c00-1_XBVMuDlDhOscGJtA&_nc_ss=7b2a8&oh=00_Af8_UrHLy_HmYF_XGIigxdTKns2faEjc56Xtit01HjEc7Q&oe=6A2436D6');
             background-size: cover;
-            background-position: center;
+            background-position: center center;
+            background-repeat: no-repeat;
             color: white;
             text-align: center;
-            padding: 100px 0;
+            padding: 120px 0;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero .container {
+            width: 100%;
         }
 
         .hero h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
         .btn {
@@ -347,6 +357,11 @@
                 font-size: 1.8rem;
             }
             
+            .hero {
+                padding: 80px 0;
+                min-height: 300px;
+            }
+
             section h2 {
                 font-size: 1.5rem;
             }
@@ -386,7 +401,7 @@
         </div>
     </nav>
 
-    <!-- INICIO / HERO -->
+    <!-- INICIO / HERO - Imagen de fondo centrada -->
     <section id="inicio" class="hero">
         <div class="container">
             <h2>50 perros rescatados te necesitan</h2>

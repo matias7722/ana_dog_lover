@@ -482,7 +482,7 @@
         </div>
     </section>
 
-    <!-- CONTACTO Y FORMULARIO -->
+      <!-- CONTACTO Y FORMULARIO -->
     <section id="contacto" class="contacto">
         <div class="container">
             <h2>📞 Contáctanos</h2>
@@ -493,9 +493,8 @@
                     <p><strong>📱 Teléfono:</strong> +51 998 883 157</p>
                     <p><strong>🕒 Horario de atención:</strong> Lunes a Domingo 9am - 5pm</p>
                     <div class="social">
-                        <a href="https://www.facebook.com/share/g/1BXWra7ocb/">📘 Facebook</a> | 
-                        <a href="#">📸 Instagram</a> | 
-                        <a href="#">💬 WhatsApp</a>
+                        <a href="https://www.facebook.com/share/g/1BXWra7ocb/" target="_blank">📘 Facebook</a> | 
+                        <a href="https://wa.me/51998883157" target="_blank">💬 WhatsApp</a>
                     </div>
                 </div>
                 <form id="formContacto" class="formulario">
@@ -526,31 +525,33 @@
 
     <script>
         // Formulario de contacto
-        document.getElementById('formContacto').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const nombre = document.getElementById('nombre').value;
-            const email = document.getElementById('email').value;
-            const tipo = document.getElementById('tipo').value;
-            const mensaje = document.getElementById('mensaje').value;
-            
-            let tipoTexto = '';
-            let emoji = '';
-            if (tipo === 'adopcion') {
-                tipoTexto = 'adoptar a uno de nuestros perritos';
-                emoji = '🐕';
-            } else if (tipo === 'voluntario') {
-                tipoTexto = 'ser voluntario en el albergue';
-                emoji = '🙋';
-            } else {
-                tipoTexto = 'hacer una donación';
-                emoji = '💰';
-            }
-            
-            alert(`🐾 ¡Gracias ${nombre}! ${emoji}\n\nNos pondremos en contacto contigo para ${tipoTexto}.\n📧 Correo: ${email}\n💬 Mensaje: ${mensaje || '(sin mensaje adicional)'}\n\n¡Los 50 perritos de ANA DOG LOVER te lo agradecen infinitamente! ❤️`);
-            
-            this.reset();
-        });
+        // Formulario de contacto - Enviar a WhatsApp
+document.getElementById('formContacto').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const tipo = document.getElementById('tipo').value;
+    const mensaje = document.getElementById('mensaje').value;
+    
+    let tipoTexto = '';
+    if (tipo === 'adopcion') tipoTexto = '🐕 Quiero adoptar';
+    else if (tipo === 'voluntario') tipoTexto = '🙋 Quiero ser voluntario';
+    else tipoTexto = '💰 Quiero donar';
+    
+    const numeroWhatsApp = "51917903838"; // Tu número sin el +51
+    
+    const texto = `Hola, me comunico desde la web ANA DOG LOVER:%0A%0A`;
+    texto += `*Nombre:* ${nombre}%0A`;
+    texto += `*Correo:* ${email}%0A`;
+    texto += `*Tipo:* ${tipoTexto}%0A%0A`;
+    texto += `*Mensaje:*%0A${mensaje}`;
+    
+    window.open(`https://wa.me/${numeroWhatsApp}?text=${texto}`, '_blank');
+    
+    alert(`🐾 ¡Gracias ${nombre}! Serás redirigido a WhatsApp para enviarnos tu mensaje.`);
+    this.reset();
+});
 
         // Botón de donación
         const btnDonar = document.getElementById('btnDonar');

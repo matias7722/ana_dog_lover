@@ -539,7 +539,7 @@ document.getElementById('formContacto').addEventListener('submit', function(e) {
     else if (tipo === 'voluntario') tipoTexto = '🙋 Quiero ser voluntario';
     else tipoTexto = '💰 Quiero donar';
     
-    const numeroWhatsApp = "917903838"; // Tu número sin el +51
+    const numeroWhatsApp = "51917903838"; // Tu número sin el +51
     
     const texto = `Hola, me comunico desde la web ANA DOG LOVER:%0A%0A`;
     texto += `*Nombre:* ${nombre}%0A`;
@@ -547,7 +547,7 @@ document.getElementById('formContacto').addEventListener('submit', function(e) {
     texto += `*Tipo:* ${tipoTexto}%0A%0A`;
     texto += `*Mensaje:*%0A${mensaje}`;
     
-    window.open(`https://wa.me/${917903838}?text=${texto}`, '_blank');
+    window.open(`https://wa.me/${51917903838}?text=${texto}`, '_blank');
     
     alert(`🐾 ¡Gracias ${nombre}! Serás redirigido a WhatsApp para enviarnos tu mensaje.`);
     this.reset();

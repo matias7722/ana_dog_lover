@@ -64,8 +64,9 @@
 
         /* HERO */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/460966513_1045794714223538_1708194077247134016_n.png?stp=dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeH3YYK8rOWfrA4EYZbe8CMfoJhDoy8G6HegmEOjLwbod3DxXI7axOK93zKeoN1fVTjsUMlFW7jf2lUiz2gQoM7d&_nc_ohc=FB0ODBBljBgQ7kNvwHn2byM&_nc_oc=AdqJAu4dyI6ceutfDylyaZj8O0022EyeQl9L3IoEIIeAHLqCdGYmHXRWGYjaGzg8YMA&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=c00-1_XBVMuDlDhOscGJtA&_nc_ss=7b2a8&oh=00_Af8_UrHLy_HmYF_XGIigxdTKns2faEjc56Xtit01HjEc7Q&oe=6A2436D6');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?w=1200');
             background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
             padding: 100px 0;
@@ -113,6 +114,24 @@
 
         .btn-pequeno:hover {
             background: #764ba2;
+        }
+
+        .btn-adopcion {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 14px 35px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn-adopcion:hover {
+            transform: scale(1.05);
+            background: #ff5252;
         }
 
         /* SECCIONES */
@@ -163,38 +182,31 @@
             margin-bottom: 15px;
         }
 
-        /* GALERÍA */
-        .galeria {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+        /* NUESTROS ANIMALES - Versión simplificada con botón */
+        .animales-simplificado {
+            text-align: center;
+            background: #f9f9f9;
         }
 
-        .perro {
+        .mensaje-adopcion {
+            max-width: 700px;
+            margin: 0 auto;
             background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            padding: 50px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        .perro:hover {
-            transform: translateY(-5px);
+        .mensaje-adopcion p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.8;
         }
 
-        .perro img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .perro h3 {
-            padding: 15px 15px 5px;
-            color: #764ba2;
-        }
-
-        .perro p {
-            padding: 0 15px 10px;
+        .icono-perro {
+            font-size: 4rem;
+            margin-bottom: 20px;
         }
 
         /* CÓMO AYUDAR */
@@ -342,6 +354,14 @@
             header h1 {
                 font-size: 1.8rem;
             }
+
+            .mensaje-adopcion {
+                padding: 30px 20px;
+            }
+
+            .mensaje-adopcion p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -396,34 +416,17 @@
         </div>
     </section>
 
-    <!-- NUESTROS ANIMALES -->
-    <section id="animales" class="animales">
+    <!-- NUESTROS ANIMALES - Versión simplificada sin detalles de perros, solo botón a contacto -->
+    <section id="animales" class="animales-simplificado">
         <div class="container">
             <h2>🐕 Nuestros animales en adopción</h2>
-            <div class="galeria">
-                <div class="perro">
-                    <img src="https://placehold.co/400x300/FFB6C1/white?text=Luna" alt="Luna">
-                    <h3>🐕 Luna</h3>
-                    <p><strong>Edad:</strong> 3 años</p>
-                    <p><strong>Personalidad:</strong> Juguetona y cariñosa</p>
-                    <p><strong>Salud:</strong> Esterilizada, vacunada</p>
-                </div>
-                <div class="perro">
-                    <img src="https://placehold.co/400x300/87CEEB/white?text=Bruno" alt="Bruno">
-                    <h3>🐕 Bruno</h3>
-                    <p><strong>Edad:</strong> 5 años</p>
-                    <p><strong>Personalidad:</strong> Tranquilo y leal</p>
-                    <p><strong>Salud:</strong> En tratamiento por sarna</p>
-                </div>
-                <div class="perro">
-                    <img src="https://placehold.co/400x300/FFD700/white?text=Chispa" alt="Chispa">
-                    <h3>🐕 Chispa</h3>
-                    <p><strong>Edad:</strong> 1 año</p>
-                    <p><strong>Personalidad:</strong> Muy activa y sociable</p>
-                    <p><strong>Salud:</strong> Completamente sana</p>
-                </div>
+            <div class="mensaje-adopcion">
+                <div class="icono-perro">🐶❤️🐕</div>
+                <p>Tenemos 50 perritos rescatados esperando un hogar lleno de amor.  
+                Cada uno tiene una historia única y necesita una familia responsable que les brinde una segunda oportunidad.</p>
+                <p>📍 Visítanos en nuestro albergue o contáctanos para conocer a nuestros peluditos.</p>
+                <a href="#contacto" class="btn-adopcion">📞 Contáctanos para adoptar</a>
             </div>
-            <p style="text-align: center; margin-top: 30px; color: #666;">✨ ¡Y muchos más perritos esperando un hogar! Contáctanos para conocerlos ✨</p>
         </div>
     </section>
 

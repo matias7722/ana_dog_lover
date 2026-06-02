@@ -3,45 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANA DOG LOVER - Albergue de perros | Responsabilidad Social Universitaria</title>
+    <title>ANA DOG LOVER - Albergue de perros</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        /* HEADER */
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
             padding: 40px 0;
         }
-
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
         }
-
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        /* NAV */
         nav {
             background: #333;
             position: sticky;
@@ -49,49 +37,27 @@
             z-index: 100;
             text-align: center;
         }
-
         nav a {
             color: white;
             text-decoration: none;
             padding: 14px 20px;
             display: inline-block;
-            transition: background 0.3s;
         }
-
         nav a:hover {
             background: #667eea;
         }
-
-        /* HERO - Imagen de fondo centrada */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/460966513_1045794714223538_1708194077247134016_n.png?stp=dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeH3YYK8rOWfrA4EYZbe8CMfoJhDoy8G6HegmEOjLwbod3DxXI7axOK93zKeoN1fVTjsUMlFW7jf2lUiz2gQoM7d&_nc_ohc=FB0ODBBljBgQ7kNvwHn2byM&_nc_oc=AdqJAu4dyI6ceutfDylyaZj8O0022EyeQl9L3IoEIIeAHLqCdGYmHXRWGYjaGzg8YMA&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=c00-1_XBVMuDlDhOscGJtA&_nc_ss=7b2a8&oh=00_Af8_UrHLy_HmYF_XGIigxdTKns2faEjc56Xtit01HjEc7Q&oe=6A2436D6');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?w=1200');
             background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
+            background-position: center;
             color: white;
             text-align: center;
-            padding: 120px 0;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
+            padding: 100px 0;
         }
-
-        .hero .container {
-            width: 100%;
-        }
-
         .hero h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        }
-
         .btn {
             display: inline-block;
             background: #ff6b6b;
@@ -100,32 +66,53 @@
             border-radius: 30px;
             text-decoration: none;
             margin-top: 20px;
-            transition: transform 0.3s;
             font-weight: bold;
         }
-
         .btn:hover {
-            transform: scale(1.05);
             background: #ff5252;
         }
-
-        .btn-pequeno {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 8px 20px;
+        section {
+            padding: 60px 0;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #764ba2;
+        }
+        .mision-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .card {
+            background: #f4f4f4;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .historia {
+            background: #e8e8ff;
+            padding: 25px;
+            border-radius: 10px;
+        }
+        .animales-simplificado {
+            text-align: center;
+            background: #f9f9f9;
+        }
+        .mensaje-adopcion {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px 30px;
             border-radius: 20px;
-            text-decoration: none;
-            margin-top: 10px;
-            border: none;
-            cursor: pointer;
-            font-size: 0.9rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-
-        .btn-pequeno:hover {
-            background: #764ba2;
-        }
-
         .btn-adopcion {
             display: inline-block;
             background: #ff6b6b;
@@ -135,176 +122,47 @@
             text-decoration: none;
             font-size: 1.1rem;
             font-weight: bold;
-            transition: transform 0.3s, background 0.3s;
             margin-top: 20px;
         }
-
-        .btn-adopcion:hover {
-            transform: scale(1.05);
-            background: #ff5252;
-        }
-
-        /* SECCIONES */
-        section {
-            padding: 60px 0;
-        }
-
-        section h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2rem;
-            color: #764ba2;
-        }
-
-        /* CONÓCENOS */
-        .mision-vision {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .card {
-            background: #f4f4f4;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-        }
-
-        .historia {
-            background: #e8e8ff;
-            padding: 25px;
-            border-radius: 10px;
-        }
-
-        .historia h3 {
-            color: #764ba2;
-            margin-bottom: 15px;
-        }
-
-        /* NUESTROS ANIMALES - Versión simplificada con botón */
-        .animales-simplificado {
-            text-align: center;
-            background: #f9f9f9;
-        }
-
-        .mensaje-adopcion {
-            max-width: 700px;
-            margin: 0 auto;
-            background: white;
-            padding: 50px 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .mensaje-adopcion p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 30px;
-            line-height: 1.8;
-        }
-
-        .icono-perro {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
-
-        /* CÓMO AYUDAR */
-        .ayudar {
-            background: #f9f9f9;
-        }
-
         .ayuda-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-
         .ayuda-item {
             background: white;
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
         }
-
-        .ayuda-item:hover {
-            transform: translateY(-3px);
-        }
-
         .ayuda-item h3 {
             color: #ff6b6b;
             margin-bottom: 15px;
         }
-
-        .ayuda-item ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .ayuda-item li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .ayuda-item li:last-child {
-            border-bottom: none;
-        }
-
-        /* CONTACTO */
         .contacto-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
         }
-
         .info-contacto {
             background: #f4f4f4;
             padding: 25px;
             border-radius: 10px;
         }
-
-        .info-contacto p {
-            margin-bottom: 15px;
-        }
-
         .social {
             margin-top: 20px;
         }
-
         .social a {
             color: #667eea;
             text-decoration: none;
             margin-right: 15px;
-            font-weight: bold;
         }
-
-        .social a:hover {
-            color: #764ba2;
-        }
-
         .formulario {
             background: white;
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
-        .formulario h3 {
-            margin-bottom: 20px;
-            color: #764ba2;
-        }
-
         .formulario input,
         .formulario select,
         .formulario textarea {
@@ -313,9 +171,7 @@
             margin-bottom: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            font-family: inherit;
         }
-
         .formulario button {
             background: #667eea;
             color: white;
@@ -324,15 +180,7 @@
             border-radius: 5px;
             width: 100%;
             cursor: pointer;
-            font-size: 1rem;
-            transition: background 0.3s;
         }
-
-        .formulario button:hover {
-            background: #764ba2;
-        }
-
-        /* FOOTER */
         footer {
             background: #333;
             color: white;
@@ -340,49 +188,14 @@
             padding: 30px 0;
             margin-top: 20px;
         }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        /* RESPONSIVE */
         @media (max-width: 768px) {
-            nav a {
-                display: inline-block;
-                padding: 10px 12px;
-                font-size: 0.9rem;
-            }
-            
-            .hero h2 {
-                font-size: 1.8rem;
-            }
-            
-            .hero {
-                padding: 80px 0;
-                min-height: 300px;
-            }
-
-            section h2 {
-                font-size: 1.5rem;
-            }
-
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            .mensaje-adopcion {
-                padding: 30px 20px;
-            }
-
-            .mensaje-adopcion p {
-                font-size: 1rem;
-            }
+            .hero h2 { font-size: 1.8rem; }
+            section h2 { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ENCABEZADO -->
     <header>
         <div class="container">
             <h1>🐾 ANA DOG LOVER</h1>
@@ -390,7 +203,6 @@
         </div>
     </header>
 
-    <!-- NAVEGACIÓN -->
     <nav>
         <div class="container">
             <a href="#inicio">Inicio</a>
@@ -401,7 +213,6 @@
         </div>
     </nav>
 
-    <!-- INICIO / HERO - Imagen de fondo centrada -->
     <section id="inicio" class="hero">
         <div class="container">
             <h2>50 perros rescatados te necesitan</h2>
@@ -410,42 +221,36 @@
         </div>
     </section>
 
-    <!-- CONÓCENOS -->
     <section id="conocenos" class="conocenos">
         <div class="container">
             <h2>📖 Conócenos</h2>
             <div class="mision-vision">
                 <div class="card">
                     <h3>🎯 Misión</h3>
-                    <p>Rescatar, rehabilitar y dar en adopción responsable a perros en situación de calle en Huancayo, promoviendo el respeto por los animales y la tenencia responsable como valores fundamentales.</p>
+                    <p>Rescatar, rehabilitar y dar en adopción responsable a perros en situación de calle en Huancayo.</p>
                 </div>
                 <div class="card">
                     <h3>👁️ Visión</h3>
-                    <p>Ser un albergue modelo en la región Junín, reconocido por las autoridades locales y la comunidad, logrando sostenibilidad a través de donaciones, voluntariado y adopciones exitosas.</p>
+                    <p>Ser un albergue modelo en la región Junín, reconocido por las autoridades y la comunidad.</p>
                 </div>
             </div>
             <div class="historia">
                 <h3>🏠 Nuestra historia</h3>
-                <p>ANA DOG LOVER fue fundado en 2016 por Ana, una mujer que decidió dar una segunda oportunidad a perros abandonados y maltratados en las calles de Huancayo. Con mucho esfuerzo y recursos limitados, hoy alberga a 50 perros que han sido rescatados de situaciones extremas: atropellos, sarna avanzada, desnutrición severa y maltrato directo. A pesar de las dificultades, el amor y la dedicación de Ana y los voluntarios mantienen este refugio como un lugar donde estos seres tienen una segunda oportunidad.</p>
+                <p>ANA DOG LOVER fue fundado en 2016 por Ana. Hoy alberga a 50 perros rescatados.</p>
             </div>
         </div>
     </section>
 
-    <!-- NUESTROS ANIMALES - Versión simplificada sin detalles de perros, solo botón a contacto -->
     <section id="animales" class="animales-simplificado">
         <div class="container">
             <h2>🐕 Nuestros animales en adopción</h2>
             <div class="mensaje-adopcion">
-                <div class="icono-perro">🐶❤️🐕</div>
-                <p>Tenemos 50 perritos rescatados esperando un hogar lleno de amor.  
-                Cada uno tiene una historia única y necesita una familia responsable que les brinde una segunda oportunidad.</p>
-                <p>📍 Visítanos en nuestro albergue o contáctanos para conocer a nuestros peluditos.</p>
+                <p>Tenemos 50 perritos rescatados esperando un hogar lleno de amor.</p>
                 <a href="#contacto" class="btn-adopcion">📞 Contáctanos para adoptar</a>
             </div>
         </div>
     </section>
 
-    <!-- CÓMO AYUDAR -->
     <section id="ayudar" class="ayudar">
         <div class="container">
             <h2>❤️ ¿Cómo ayudar?</h2>
@@ -453,36 +258,25 @@
                 <div class="ayuda-item">
                     <h3>🍖 Víveres necesarios</h3>
                     <ul>
-                        <li>Croquetas para perro adulto (22kg)</li>
+                        <li>Croquetas para perro adulto</li>
                         <li>Lejía, escobas, recogedores</li>
-                        <li>Bolsas, guantes, mangueras</li>
                         <li>Medicamentos: antiparasitarios, vacunas</li>
-                        <li>Mantas, toallas y frazadas</li>
                     </ul>
                 </div>
                 <div class="ayuda-item">
                     <h3>💰 Donaciones económicas</h3>
                     <p><strong>📱 Yape:</strong> 912 345 678</p>
                     <p><strong>📱 Plin:</strong> 987 654 321</p>
-                    <p><strong>🏦 Banco:</strong> Cuenta de ahorros - 123-456-7890</p>
-                    <button id="btnDonar" class="btn-pequeno">💸 Donar ahora</button>
+                    <button id="btnDonar" class="btn">💸 Donar ahora</button>
                 </div>
                 <div class="ayuda-item">
                     <h3>🙋 Voluntariado</h3>
-                    <p>Únete como voluntario en actividades como:</p>
-                    <ul>
-                        <li>✓ Limpieza de espacios</li>
-                        <li>✓ Paseo de perros</li>
-                        <li>✓ Acompañamiento afectivo</li>
-                        <li>✓ Ayuda en adopciones</li>
-                    </ul>
-                    <a href="#contacto" class="btn-pequeno">Quiero ser voluntario</a>
+                    <a href="#contacto" class="btn">Quiero ser voluntario</a>
                 </div>
             </div>
         </div>
     </section>
 
-      <!-- CONTACTO Y FORMULARIO -->
     <section id="contacto" class="contacto">
         <div class="container">
             <h2>📞 Contáctanos</h2>
@@ -491,7 +285,6 @@
                     <p><strong>📍 Dirección:</strong> Chilca Jr. Arequipa 583, Huancayo - Junín</p>
                     <p><strong>📧 Correo:</strong> anadoglover@email.com</p>
                     <p><strong>📱 Teléfono:</strong> +51 998 883 157</p>
-                    <p><strong>🕒 Horario de atención:</strong> Lunes a Domingo 9am - 5pm</p>
                     <div class="social">
                         <a href="https://www.facebook.com/share/g/1BXWra7ocb/" target="_blank">📘 Facebook</a> | 
                         <a href="https://wa.me/51998883157" target="_blank">💬 WhatsApp</a>
@@ -506,68 +299,72 @@
                         <option value="voluntario">🙋 Quiero ser voluntario</option>
                         <option value="donacion">💰 Quiero donar</option>
                     </select>
-                    <textarea id="mensaje" placeholder="Cuéntanos cómo quieres ayudar o qué perrito te interesa..." rows="3"></textarea>
+                    <textarea id="mensaje" placeholder="Cuéntanos cómo quieres ayudar..." rows="3"></textarea>
                     <button type="submit">Enviar mensaje</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- PIE DE PÁGINA -->
     <footer>
         <div class="container">
-            <p>© 2026 ANA DOG LOVER - Albergue de perros rescatados</p>
-            <p>Proyecto de Responsabilidad Social Universitaria - Ingeniería al servicio de la comunidad</p>
-            <p>Universidad Peruana Los Andes - Facultad de Ingeniería - Ingeniería de Sistemas y Computación</p>
-            <p style="margin-top: 15px; font-size: 0.9rem;">"Tecnología con sentido humano"</p>
+            <p>© 2026 ANA DOG LOVER - Proyecto de Responsabilidad Social Universitaria</p>
+            <p>Universidad Peruana Los Andes - Ingeniería de Sistemas</p>
         </div>
     </footer>
 
     <script>
-        // Formulario de contacto
-// Formulario de contacto - Enviar a WhatsApp
-document.getElementById('formContacto').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const nombre = document.getElementById('nombre').value;
-    const email = document.getElementById('email').value;
-    const tipo = document.getElementById('tipo').value;
-    const mensaje = document.getElementById('mensaje').value;
-    
-    let tipoTexto = '';
-    if (tipo === 'adopcion') tipoTexto = '🐕 Adoptar';
-    else if (tipo === 'voluntario') tipoTexto = '🙋 Voluntario';
-    else tipoTexto = '💰 Donación';
-    
-    // Número de WhatsApp del albergue
-    const numeroWhatsApp = "51917903838"; // +51 998 883 157
-    
-    const texto = `Hola, me comunico desde la web ANA DOG LOVER:%0A%0A*Nombre:* ${nombre}%0A*Correo:* ${email}%0A*Tipo:* ${tipoTexto}%0A%0A*Mensaje:*%0A${mensaje}`;
-    
-    window.open(`https://wa.me/${numeroWhatsApp}?text=${texto}`, '_blank');
-    
-    alert(`🐾 ¡Gracias ${nombre}! Serás redirigido a WhatsApp para enviar tu mensaje.`);
-    this.reset();
-});
-
-// Botón de donación
-const btnDonar = document.getElementById('btnDonar');
-if (btnDonar) {
-    btnDonar.addEventListener('click', function() {
-        alert('📱 Números para donar:\n\n💛 YAPE: 912 345 678\n💙 PLIN: 987 654 321\n\n✨ ¡Gracias por tu ayuda! ✨');
-    });
-}
-
-// Smooth scroll
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-});
-
+        // FORMULARIO - Enviar a WhatsApp (funciona 100%)
+        const form = document.getElementById('formContacto');
         
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const nombre = document.getElementById('nombre').value;
+                const email = document.getElementById('email').value;
+                const tipo = document.getElementById('tipo').value;
+                const mensaje = document.getElementById('mensaje').value;
+                
+                let tipoTexto = '';
+                if (tipo === 'adopcion') tipoTexto = '🐕 ADOPCIÓN';
+                else if (tipo === 'voluntario') tipoTexto = '🙋 VOLUNTARIADO';
+                else tipoTexto = '💰 DONACIÓN';
+                
+                // Número de WhatsApp (formato internacional SIN el signo +)
+                const numero = "51998883157";
+                
+                // Crear mensaje
+                const texto = `*NUEVO MENSAJE DE LA WEB*%0A%0A*Nombre:* ${nombre}%0A*Correo:* ${email}%0A*Tipo:* ${tipoTexto}%0A%0A*Mensaje:*%0A${mensaje}%0A%0A--- Enviado desde anadoglover.com ---`;
+                
+                // Abrir WhatsApp
+                const url = `https://wa.me/${numero}?text=${texto}`;
+                window.open(url, '_blank');
+                
+                // Mostrar confirmación
+                alert(`✅ ¡Gracias ${nombre}! Se abrirá WhatsApp para que envíes tu mensaje.`);
+                
+                // Limpiar formulario
+                form.reset();
+            });
+        }
+        
+        // Botón de donación
+        const btnDonar = document.getElementById('btnDonar');
+        if (btnDonar) {
+            btnDonar.addEventListener('click', function() {
+                alert('📱 Donaciones:\n\nYAPE: 912 345 678\nPLIN: 987 654 321\n\n¡Gracias por tu ayuda! 🐾');
+            });
+        }
+        
+        // Smooth scroll para navegación
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
